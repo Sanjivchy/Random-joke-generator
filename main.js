@@ -22,8 +22,11 @@ function getPunchline(){
 
 async function getjokes(){
     const jokePromise =await fetch('https://official-joke-api.appspot.com/jokes/programming/random')
+//other api https://official-joke-api.appspot.com/random_ten
+
+//https://official-joke-api.appspot.com/jokes/ten
     const joke =await jokePromise.json();
-    //console.log(joke);
+    console.log(joke);
     //get the setup from the joke and insert it into the setupdiv element
     setupDiv.innerHTML=joke[0].setup;
     //create a global variable which will stire the current punch line updated each time
